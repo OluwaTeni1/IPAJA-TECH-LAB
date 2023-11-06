@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@300;400;500;600;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;600;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+:root{
+    --main-color:#001029;
+    --text-color: rgb(255, 161, 68);
+    --text-color1: #FFE047;
+    --text-color2:  #E0AC00;
+    --text-color3: #0054A3;
+    --container-color: #002752;
+    --container-color2: rgba(15, 0, 74, 0.2);
+    --bg-color: #ffff;
+    --font-style: 'Poppins', sans-serif;
+    --font-color: rgb(255, 247, 223);
+    --font-style: 'Ubuntu', sans-serif;
+    --font-style2: 'Prompt', sans-serif;;
+
+}
+body{
+    background: linear-gradient(to right, var(--text-color1), var(--text-color));
+    background-size: cover;
+}
+
+.body{
+    display: grid;
+    margin-top: 5rem;
+    width: 100%;
+    place-items: center;
+    margin-bottom: 2rem;
+}
+
+.login-container{
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-container form .title{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0 10px 0;
+    position: relative;
+    color: var(--main-color);
+}
+
+.login-container form .input-box{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.login-container form .input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.login-container form .underline::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    left: 0;
+    bottom: 0;
+}
+
+.login-container form .underline::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--main-color);
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s ease;
+}
+
+.login-container form .input-box input:focus ~ .underline::after,
+.login-container form .input-box input:valid ~ .underline::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.login-container form .button{
+    margin: 40px 0 20px 0;
+}
+
+.login-container .input-box input[type="submit"] {
+    background: var(--main-color);
+    font-size: 18px;
+    color: var(--text-color1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container .input-box input[type="submit"]:hover{
+    background: linear-gradient(to right, var(--main-color) 0%, var(--text-color)100%);
+    color: var(--bg-color);
+    transition: 0.5s all linear;
+}
+
+.login-container .option{
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.login-container .option div{
+    display: flex;
+    align-items: center;
+}
+.option a{
+    font-size: 0.85rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--text-color3);
+}
+.login-container .google a,
+.login-container .twitter a,
+.login-container .facebook a{
+    display: block;
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-container .google i,
+.login-container .twitter i,
+.login-container .facebook i {
+    padding-right: 12px;
+    font-size: 20px;
+}
+
+.login-container .google a{
+    background: linear-gradient(to right, var(--text-color)0%, var(--text-color3)100%);
+    margin: 20px 0 15px 0;
+}
+.login-container .google a:hover{
+    background: linear-gradient(to left, var(--text-color)0%, var(--text-color3)100%);
+    color: #001029;
+    transition: all 0.5s ease;
+}
+
+.login-container .twitter a{
+    background: linear-gradient(to right, var(--text-color)0%, var(--text-color3)100%);
+    margin: 20px 0 15px 0;
+}
+.login-container .twitter a:hover{
+    background: linear-gradient(to left, var(--text-color)0%, var(--text-color3)100%);
+    color: #001029;
+    transition: all 0.5s ease;
+}
+
+.login-container .facebook a{
+    background: linear-gradient(to right, var(--text-color)0%, var(--text-color3)100%);
+    margin: 20px 0 15px 0;
+}
+.login-container .facebook a:hover{
+    background: linear-gradient(to left, var(--text-color)0%, var(--text-color3)100%);
+    color: #001029;
+    transition: all 0.5s ease;
+}
+
+@media(max-width: 540px) {
+    .login-container{
+    max-width: 400px;
+    width: 90%;
+    }
+}
